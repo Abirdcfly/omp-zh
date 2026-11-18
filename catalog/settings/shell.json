@@ -1,0 +1,21 @@
+{
+  "bash.enabled": ["Bash 工具", "启用 bash 工具以执行 shell 命令"],
+  "bash.allowCompoundCommands": ["允许复合命令", "按单条命令逐个评估字面量 && 串联；未匹配的命令仍走常规 bash 审批策略与模式"],
+  "bash.autoBackground.enabled": ["Bash 自动后台", "自动把长时间运行的 bash 命令转入后台，稍后交付结果"],
+  "bash.gitGuard": ["Git 守卫", "拒绝在仓库主检出中丢弃或搬移共享工作的 git 命令：stash、reset --hard 或重置到其它提交，以及非合并/变基冲突场景下的 checkout/switch/restore。在链接的 worktree 中允许执行，但会先保存将被丢弃的未提交改动"],
+  "bash.patterns": ["Bash 审批规则", "按顺序匹配的 bash 命令审批规则。每项包含 match 与 approval 字段；仅支持 '*' 通配符"],
+  "bash.allowedEnvVars": ["Bash 允许的环境变量", "匹配 bash.patterns 允许规则时，可作为前置 KEY=VALUE 前缀的精确环境变量名（不支持通配）。取值不限，因此只应列出无害的构建/测试变量；会改变执行行为的变量（PATH、LD_PRELOAD、BASH_ENV、*_RUNNER、*_WRAPPER）等于允许任意命令执行"],
+  "bashInterceptor.enabled": ["Bash 拦截器", "拦截已有专用工具的 shell 命令"],
+  "bash.direnv": ["direnv 自动加载", "把仓库的 direnv/devenv `.envrc` 自动加载进 bash 会话，无需手动 `direnv exec` 即可使用 devenv 工具与环境变量。遵循 direnv 的允许列表：未执行过 `direnv allow` 的 `.envrc` 永远不会被执行"],
+  "bash.direnvLoadTimeoutMs": ["direnv 加载超时（毫秒）", "首次 `direnv export` 的最长等待时间（冷启动的 devenv shell 可能较慢）；超时则本次会话不加载 direnv 环境"],
+  "shellMinimizer.enabled": ["Shell 输出精简", "把冗长的 shell 输出（git、npm、cargo 等）压缩后再返回给代理"],
+  "shellMinimizer.sourceOutlineLevel": ["Shell 精简源码大纲", "cat/read 源文件时的大纲模式：default 或 aggressive"],
+  "eval.py": ["Python 求值后端", "允许 eval 工具把 Python 代码单元分派给 IPython 内核"],
+  "eval.js": ["JavaScript 求值后端", "允许 eval 工具把 JavaScript 代码单元分派给进程内运行时"],
+  "eval.autoProvision": ["求值环境自动准备", "首次安装时自动创建托管的 JavaScript 求值包环境"],
+  "eval.tools.enabled": ["Eval 定义的工具", "允许 eval 代码单元定义工具（Python 用 @tool，JS 用 tool(fn)），供 task、agent() 和 workpool() 子代理调用"],
+  "eval.workpool.freshAgents": ["Workpool 全新代理", "为 workpool 的每个条目新建子代理，而不是复用工作进程或批量排队"],
+  "eval.autoBackground.enabled": ["Eval 自动后台", "自动把长时间运行的 eval 代码单元转入后台，稍后交付结果"],
+  "python.kernelMode": ["Python 内核模式", "在多次 eval 调用间保持 IPython 内核存活，还是每次重新启动"],
+  "python.interpreter": ["Python 解释器", "可选：指定确切的 Python 可执行文件路径。设置后将跳过自动的 Python 运行时发现"]
+}

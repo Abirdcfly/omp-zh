@@ -1,0 +1,75 @@
+{
+  "name": "omp-zh",
+  "version": "1.0.0",
+  "private": false,
+  "description": "oh-my-pi 简体中文汉化插件：界面、斜杠命令、设置面板与常用对话提示全中文",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "oh-my-pi",
+    "omp",
+    "i18n",
+    "zh-CN",
+    "chinese",
+    "localization",
+    "tui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abirdcfly/omp-zh.git"
+  },
+  "engines": {
+    "omp": "18.22.2"
+  },
+  "omp": {
+    "extensions": [
+      "./src/index.ts"
+    ],
+    "settings": {
+      "enabled": {
+        "type": "boolean",
+        "default": true,
+        "description": "启用中文界面（关闭后恢复 omp 原始英文界面，无需重启）"
+      },
+      "scope": {
+        "type": "enum",
+        "values": [
+          "all",
+          "settings",
+          "commands",
+          "chrome"
+        ],
+        "default": "all",
+        "description": "汉化范围：all=全部；settings=仅设置面板；commands=仅斜杠命令与补全；chrome=仅对话框等界面文案"
+      },
+      "chrome": {
+        "type": "boolean",
+        "default": true,
+        "description": "是否翻译对话框、提示行等界面文案（关闭可避免个别自定义渲染被误译）"
+      },
+      "capture": {
+        "type": "boolean",
+        "default": false,
+        "description": "缺词收集模式：把未翻译的界面文案写入日志，便于补充词表"
+      }
+    }
+  },
+  "files": [
+    "src",
+    "catalog/settings",
+    "catalog/ui.json",
+    "catalog/commands.json",
+    "scripts",
+    "docs",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "bun test",
+    "coverage": "bun scripts/coverage.ts",
+    "catalog": "bun scripts/build-catalog.ts",
+    "extract": "bun scripts/extract-omp.ts",
+    "check": "bun test && bun scripts/build-catalog.ts && bun scripts/coverage.ts"
+  }
+}
