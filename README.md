@@ -88,7 +88,7 @@ bun scripts/build-catalog.ts  # 合并快照 + 结构检查
 bun scripts/extract-omp.ts <oh-my-pi 源码目录>  # 从上游源码重抽设置项与命令清单
 ```
 
-`scripts/coverage.ts` 优先读运行时 registry，读不到就回退到 `scripts/manifest/settings-18.22.2.json`（18.22.2 的离线快照），存在缺口时退出码为 1，适合放进 CI。
+`scripts/coverage.ts` 优先读运行时 registry，读不到就回退到 `scripts/snapshot/settings-18.22.2.json`（18.22.2 的离线快照），存在缺口时退出码为 1，适合放进 CI。
 
 ## 版本与兼容
 

@@ -3,7 +3,7 @@
  *
  * 清单来源优先级：
  *  1. 当前已安装的 omp 运行时（能从 @oh-my-pi/pi-coding-agent/config/registry 读到 ui 元数据时以实时数据为准）；
- *  2. scripts/manifest/settings-18.22.2.json —— 基线版本 18.22.2 的离线快照。
+ *  2. scripts/snapshot/settings-18.22.2.json —— 基线版本 18.22.2 的离线快照。
  *
  * 只做只读统计。存在缺口时退出码为 1，便于 CI 拦住“少翻一条设置”的提交。
  */
@@ -17,7 +17,7 @@ interface Def {
 	label?: string | null;
 }
 
-const manifestPath = resolve(packageRoot, "scripts/manifest/settings-18.22.2.json");
+const manifestPath = resolve(packageRoot, "scripts/snapshot/settings-18.22.2.json");
 
 async function fromRuntime(): Promise<Def[]> {
 	try {
@@ -47,7 +47,7 @@ const origin = runtimeDefs.length > 0 ? "运行时 registry" : "18.22.2 快照";
 const { catalog, files } = loadCatalog();
 
 if (defs.length === 0) {
-	console.error("找不到设置项清单：既读不到运行时 registry，也没有 scripts/manifest/settings-18.22.2.json。");
+	console.error("找不到设置项清单：既读不到运行时 registry，也没有 scripts/snapshot/settings-18.22.2.json。");
 	process.exit(2);
 }
 

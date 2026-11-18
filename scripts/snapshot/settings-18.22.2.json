@@ -1,0 +1,2312 @@
+[
+ {
+  "id": "hindsight.apiUrl",
+  "tab": "memory",
+  "label": "Hindsight API URL"
+ },
+ {
+  "id": "hindsight.apiToken",
+  "tab": "memory",
+  "label": "Hindsight API Token"
+ },
+ {
+  "id": "hindsight.bankId",
+  "tab": "memory",
+  "label": "Hindsight Bank ID"
+ },
+ {
+  "id": "hindsight.scoping",
+  "tab": "memory",
+  "label": "Hindsight Scoping"
+ },
+ {
+  "id": "hindsight.globalScope",
+  "tab": "memory",
+  "label": "Hindsight Global Scope"
+ },
+ {
+  "id": "hindsight.autoRecall",
+  "tab": "memory",
+  "label": "Hindsight Auto Recall"
+ },
+ {
+  "id": "hindsight.autoRetain",
+  "tab": "memory",
+  "label": "Hindsight Auto Retain"
+ },
+ {
+  "id": "hindsight.retainMode",
+  "tab": "memory",
+  "label": "Hindsight Retain Mode"
+ },
+ {
+  "id": "hindsight.mentalModelsEnabled",
+  "tab": "memory",
+  "label": "Hindsight Mental Models"
+ },
+ {
+  "id": "hindsight.mentalModelAutoSeed",
+  "tab": "memory",
+  "label": "Hindsight Mental Model Auto-Seed"
+ },
+ {
+  "id": "advisor.enabled",
+  "tab": "model",
+  "label": "Enable Advisor"
+ },
+ {
+  "id": "advisor.syncBacklog",
+  "tab": "model",
+  "label": "Advisor Sync Backlog"
+ },
+ {
+  "id": "advisor.immuneTurns",
+  "tab": "model",
+  "label": "Advisor Immune Turns"
+ },
+ {
+  "id": "advisor.continueSeverity",
+  "tab": "model",
+  "label": "Advisor Continue Severity"
+ },
+ {
+  "id": "advisor.reviewMode",
+  "tab": "model",
+  "label": "Advisor Review Mode"
+ },
+ {
+  "id": "advisor.reviewInterval",
+  "tab": "model",
+  "label": "Advisor Review Interval"
+ },
+ {
+  "id": "advisor.maxNotesPerUpdate",
+  "tab": "model",
+  "label": "Advisor Max Notes Per Update"
+ },
+ {
+  "id": "advisor.evictStaleResults",
+  "tab": "model",
+  "label": "Advisor Evict Stale Results"
+ },
+ {
+  "id": "tools.artifactSpillThreshold",
+  "tab": "tools",
+  "label": "Artifact Spill Threshold (KB)"
+ },
+ {
+  "id": "tools.artifactTailBytes",
+  "tab": "tools",
+  "label": "Artifact Tail Size (KB)"
+ },
+ {
+  "id": "tools.artifactHeadBytes",
+  "tab": "tools",
+  "label": "Artifact Head Size (KB)"
+ },
+ {
+  "id": "tools.outputMaxColumns",
+  "tab": "tools",
+  "label": "Output Column Cap"
+ },
+ {
+  "id": "tools.artifactTailLines",
+  "tab": "tools",
+  "label": "Artifact Tail Lines"
+ },
+ {
+  "id": "tools.artifactMaxBytes",
+  "tab": "tools",
+  "label": "Artifact File Cap (MB)"
+ },
+ {
+  "id": "readLineNumbers",
+  "tab": "files",
+  "label": "Line Numbers"
+ },
+ {
+  "id": "read.defaultLimit",
+  "tab": "files",
+  "label": "Default Read Limit"
+ },
+ {
+  "id": "read.renderMarkdown",
+  "tab": "files",
+  "label": "Markdown Previews"
+ },
+ {
+  "id": "read.summarize.enabled",
+  "tab": "files",
+  "label": "Read Summaries"
+ },
+ {
+  "id": "read.summarize.prose",
+  "tab": "files",
+  "label": "Prose Summaries"
+ },
+ {
+  "id": "read.summarize.minBodyLines",
+  "tab": "files",
+  "label": "Read Summary Body Lines"
+ },
+ {
+  "id": "read.summarize.minCommentLines",
+  "tab": "files",
+  "label": "Read Summary Comment Lines"
+ },
+ {
+  "id": "read.summarize.minTotalLines",
+  "tab": "files",
+  "label": "Read Summary Minimum File Length"
+ },
+ {
+  "id": "read.summarize.unfoldUntil",
+  "tab": "files",
+  "label": "Read Summary Unfold Target"
+ },
+ {
+  "id": "read.summarize.unfoldLimit",
+  "tab": "files",
+  "label": "Read Summary Unfold Ceiling"
+ },
+ {
+  "id": "read.toolResultPreview",
+  "tab": "files",
+  "label": "Inline Read Previews"
+ },
+ {
+  "id": "tools.approval",
+  "tab": "interaction",
+  "label": "Tool Approval Policies"
+ },
+ {
+  "id": "tools.approvalMode",
+  "tab": "interaction",
+  "label": "Tool Approval"
+ },
+ {
+  "id": "tools.restrictedFolders",
+  "tab": "interaction",
+  "label": "Restricted Folders"
+ },
+ {
+  "id": "todo.enabled",
+  "tab": "tools",
+  "label": "Todos"
+ },
+ {
+  "id": "todo.reminders",
+  "tab": "tools",
+  "label": "Todo Reminders"
+ },
+ {
+  "id": "todo.remindersMax",
+  "tab": "tools",
+  "label": "Todo Reminder Limit"
+ },
+ {
+  "id": "todo.midRunNudges",
+  "tab": "tools",
+  "label": "Mid-Run Todo Nudges"
+ },
+ {
+  "id": "todo.eager",
+  "tab": "tools",
+  "label": "Create Todos Automatically"
+ },
+ {
+  "id": "tasks.todoClearDelay",
+  "tab": "tools",
+  "label": "Todo Auto-Clear Delay"
+ },
+ {
+  "id": "glob.enabled",
+  "tab": "tools",
+  "label": "Glob"
+ },
+ {
+  "id": "grep.enabled",
+  "tab": "tools",
+  "label": "Grep"
+ },
+ {
+  "id": "grep.contextBefore",
+  "tab": "tools",
+  "label": "Grep Context Before"
+ },
+ {
+  "id": "grep.contextAfter",
+  "tab": "tools",
+  "label": "Grep Context After"
+ },
+ {
+  "id": "astGrep.enabled",
+  "tab": "tools",
+  "label": "AST Grep"
+ },
+ {
+  "id": "astEdit.enabled",
+  "tab": "tools",
+  "label": "AST Edit"
+ },
+ {
+  "id": "find.verifyModel",
+  "tab": "tools",
+  "label": "Find Verification Model"
+ },
+ {
+  "id": "find.enabled",
+  "tab": "tools",
+  "label": "Find (semantic grep)"
+ },
+ {
+  "id": "debug.enabled",
+  "tab": "tools",
+  "label": "Debug"
+ },
+ {
+  "id": "launch.enabled",
+  "tab": "tools",
+  "label": "Services"
+ },
+ {
+  "id": "speechgen.enabled",
+  "tab": "tools",
+  "label": "Speech Generation"
+ },
+ {
+  "id": "generate_image.enabled",
+  "tab": "tools",
+  "label": "Generate Image"
+ },
+ {
+  "id": "computer.enabled",
+  "tab": "tools",
+  "label": "Computer"
+ },
+ {
+  "id": "ratchet.enabled",
+  "tab": "tools",
+  "label": "Ratchet"
+ },
+ {
+  "id": "archive.enabled",
+  "tab": "tools",
+  "label": "Archive"
+ },
+ {
+  "id": "commit.enabled",
+  "tab": "tools",
+  "label": "Selective commit"
+ },
+ {
+  "id": "computer.display",
+  "tab": "tools",
+  "label": "Computer Display"
+ },
+ {
+  "id": "computer.maxWidth",
+  "tab": "tools",
+  "label": "Computer Screenshot Width"
+ },
+ {
+  "id": "computer.maxHeight",
+  "tab": "tools",
+  "label": "Computer Screenshot Height"
+ },
+ {
+  "id": "computer.backgroundFallback",
+  "tab": "tools",
+  "label": "Computer Background Fallback"
+ },
+ {
+  "id": "images.questionTimeoutMs",
+  "tab": "tools",
+  "label": "Image Question Timeout"
+ },
+ {
+  "id": "checkpoint.enabled",
+  "tab": "tools",
+  "label": "Checkpoint/Rewind"
+ },
+ {
+  "id": "fetch.enabled",
+  "tab": "tools",
+  "label": "Read URLs"
+ },
+ {
+  "id": "vault.enabled",
+  "tab": "tools",
+  "label": "Obsidian Vault"
+ },
+ {
+  "id": "github.enabled",
+  "tab": "tools",
+  "label": "GitHub CLI"
+ },
+ {
+  "id": "github.cache.enabled",
+  "tab": "tools",
+  "label": "GitHub View Cache"
+ },
+ {
+  "id": "github.cache.softTtlSec",
+  "tab": "tools",
+  "label": "GitHub Cache Soft TTL"
+ },
+ {
+  "id": "github.cache.hardTtlSec",
+  "tab": "tools",
+  "label": "GitHub Cache Hard TTL"
+ },
+ {
+  "id": "web_search.enabled",
+  "tab": "tools",
+  "label": "Web Search"
+ },
+ {
+  "id": "security.enabled",
+  "tab": "tools",
+  "label": "Security"
+ },
+ {
+  "id": "ask.enabled",
+  "tab": "tools",
+  "label": "Ask"
+ },
+ {
+  "id": "out.enabled",
+  "tab": "tools",
+  "label": "Out"
+ },
+ {
+  "id": "tools.intentTracing",
+  "tab": "tools",
+  "label": "Intent Tracing"
+ },
+ {
+  "id": "tools.abortOnFabricatedResult",
+  "tab": "tools",
+  "label": "Abort On Fabricated Tool Result"
+ },
+ {
+  "id": "tools.speculativeExecution.enabled",
+  "tab": "tools",
+  "label": "Experimental Speculative Execution"
+ },
+ {
+  "id": "tools.speculativeExecution.maxInFlight",
+  "tab": "tools",
+  "label": "Speculative Execution Concurrency"
+ },
+ {
+  "id": "tools.maxTimeout",
+  "tab": "tools",
+  "label": "Max Tool Timeout"
+ },
+ {
+  "id": "async.enabled",
+  "tab": "tools",
+  "label": "Async Execution"
+ },
+ {
+  "id": "async.printWake",
+  "tab": "tools",
+  "label": "Wake Print Mode on Job Results"
+ },
+ {
+  "id": "async.widgets",
+  "tab": "tools",
+  "label": "Live Job Widgets"
+ },
+ {
+  "id": "tools.xdev",
+  "tab": "tools",
+  "label": "xd:// Tools"
+ },
+ {
+  "id": "tools.xdevDocs",
+  "tab": "tools",
+  "label": "xd:// Prompt Docs"
+ },
+ {
+  "id": "tools.xdevInlineDevices",
+  "tab": "tools",
+  "label": "xd:// Inline Devices"
+ },
+ {
+  "id": "tools.xdevNotices",
+  "tab": "tools",
+  "label": "xd:// Mount Notices"
+ },
+ {
+  "id": "dev.autoqa",
+  "tab": "tools",
+  "label": "Auto QA"
+ },
+ {
+  "id": "dev.autoqaPush.endpoint",
+  "tab": "tools",
+  "label": "Auto QA Push Endpoint"
+ },
+ {
+  "id": "browser.enabled",
+  "tab": "tools",
+  "label": "Browser"
+ },
+ {
+  "id": "browser.cdpUrl",
+  "tab": "tools",
+  "label": "Browser CDP URL"
+ },
+ {
+  "id": "browser.relay",
+  "tab": "tools",
+  "label": "Browser Relay"
+ },
+ {
+  "id": "browser.relayUrl",
+  "tab": "tools",
+  "label": "Browser Relay URL"
+ },
+ {
+  "id": "browser.headless",
+  "tab": "tools",
+  "label": "Headless Browser"
+ },
+ {
+  "id": "browser.cmux",
+  "tab": "tools",
+  "label": "cmux Browser"
+ },
+ {
+  "id": "browser.tern",
+  "tab": "tools",
+  "label": "Tern Browser"
+ },
+ {
+  "id": "browser.webkit",
+  "tab": "tools",
+  "label": "WebKit Browser"
+ },
+ {
+  "id": "browser.webkitPath",
+  "tab": "tools",
+  "label": "Browser WebKit Path"
+ },
+ {
+  "id": "browser.freezeOnTurnEnd",
+  "tab": "tools",
+  "label": "Freeze Browser Tabs On Turn End"
+ },
+ {
+  "id": "browser.idleCloseSec",
+  "tab": "tools",
+  "label": "Browser Idle Close Timeout"
+ },
+ {
+  "id": "browser.screenshotDir",
+  "tab": "tools",
+  "label": "Screenshot Directory"
+ },
+ {
+  "id": "spotlight.experiment.enabled",
+  "tab": "tools",
+  "label": "Spotlight Experiment"
+ },
+ {
+  "id": "autoResume",
+  "tab": "interaction",
+  "label": "Auto Resume"
+ },
+ {
+  "id": "git.enabled",
+  "tab": "interaction",
+  "label": "Enable Git Integration"
+ },
+ {
+  "id": "theme.dark",
+  "tab": "appearance",
+  "label": "Dark Theme"
+ },
+ {
+  "id": "theme.light",
+  "tab": "appearance",
+  "label": "Light Theme"
+ },
+ {
+  "id": "symbolPreset",
+  "tab": "appearance",
+  "label": "Symbol Preset"
+ },
+ {
+  "id": "colorBlindMode",
+  "tab": "appearance",
+  "label": "Color-Blind Mode"
+ },
+ {
+  "id": "composer.shape",
+  "tab": "appearance",
+  "label": "Composer Shape"
+ },
+ {
+  "id": "composer.tokenRate",
+  "tab": "appearance",
+  "label": "Generation Rate"
+ },
+ {
+  "id": "statusLine.preset",
+  "tab": "appearance",
+  "label": "Status Line Preset"
+ },
+ {
+  "id": "statusLine.separator",
+  "tab": "appearance",
+  "label": "Status Line Separator"
+ },
+ {
+  "id": "statusLine.contextLine",
+  "tab": "appearance",
+  "label": "Context-Reactive Line"
+ },
+ {
+  "id": "statusLine.sessionAccent",
+  "tab": "appearance",
+  "label": "Session Accent"
+ },
+ {
+  "id": "statusLine.transparent",
+  "tab": "appearance",
+  "label": "Transparent Status Line"
+ },
+ {
+  "id": "statusLine.compactThinkingLevel",
+  "tab": "appearance",
+  "label": "Compact Thinking Level"
+ },
+ {
+  "id": "statusLine.showHookStatus",
+  "tab": "appearance",
+  "label": "Show Hook Status"
+ },
+ {
+  "id": "terminal.showImages",
+  "tab": "appearance",
+  "label": "Show Inline Images"
+ },
+ {
+  "id": "images.autoResize",
+  "tab": "appearance",
+  "label": "Auto-Resize Images"
+ },
+ {
+  "id": "images.blockImages",
+  "tab": "appearance",
+  "label": "Block Images"
+ },
+ {
+  "id": "tui.resizeScrollback",
+  "tab": "appearance",
+  "label": "Resize Scrollback"
+ },
+ {
+  "id": "tui.completeScrollback",
+  "tab": "appearance",
+  "label": "Complete Scrollback"
+ },
+ {
+  "id": "terminal.showProgress",
+  "tab": "appearance",
+  "label": "Native Terminal Progress"
+ },
+ {
+  "id": "terminal.programStatus",
+  "tab": "appearance",
+  "label": "Program Status (OSC 7501)"
+ },
+ {
+  "id": "tui.textSizing",
+  "tab": "appearance",
+  "label": "Large Headings (Kitty)"
+ },
+ {
+  "id": "tui.colorfulMarkdown",
+  "tab": "appearance",
+  "label": "Colorful Markdown"
+ },
+ {
+  "id": "tui.renderMermaid",
+  "tab": "appearance",
+  "label": "Render Mermaid Diagrams"
+ },
+ {
+  "id": "tui.renderSvg",
+  "tab": "appearance",
+  "label": "Render SVG Figures"
+ },
+ {
+  "id": "tui.renderEmbeds",
+  "tab": "appearance",
+  "label": "Render Embedded Images and Pages"
+ },
+ {
+  "id": "tui.autoGraph",
+  "tab": "appearance",
+  "label": "Auto-Graph Tables"
+ },
+ {
+  "id": "tui.reactions",
+  "tab": "appearance",
+  "label": "Agent Reactions"
+ },
+ {
+  "id": "tui.codexResetFireworks",
+  "tab": "appearance",
+  "label": "Codex Reset Fireworks"
+ },
+ {
+  "id": "tui.titleState",
+  "tab": "appearance",
+  "label": "Terminal Title Run State"
+ },
+ {
+  "id": "tui.titleSpinner",
+  "tab": "appearance",
+  "label": "Terminal Title Spinner"
+ },
+ {
+  "id": "tui.spinnerInterval",
+  "tab": "appearance",
+  "label": "Spinner Interval (ms)"
+ },
+ {
+  "id": "tui.maxFps",
+  "tab": "appearance",
+  "label": "Max Frames Per Second"
+ },
+ {
+  "id": "tui.hyperlinks",
+  "tab": "appearance",
+  "label": "Terminal Hyperlinks"
+ },
+ {
+  "id": "tui.mouse",
+  "tab": "appearance",
+  "label": "Mouse Click-to-Focus"
+ },
+ {
+  "id": "tui.tight",
+  "tab": "appearance",
+  "label": "Tight Layout"
+ },
+ {
+  "id": "display.shimmer",
+  "tab": "appearance",
+  "label": "Shimmer"
+ },
+ {
+  "id": "tui.motion",
+  "tab": "appearance",
+  "label": "Motion"
+ },
+ {
+  "id": "display.pinnedAgents",
+  "tab": "appearance",
+  "label": "Pinned Agents"
+ },
+ {
+  "id": "display.subagentLivePreview",
+  "tab": "appearance",
+  "label": "Subagent Live Preview"
+ },
+ {
+  "id": "display.smoothStreaming",
+  "tab": "appearance",
+  "label": "Smooth Streaming"
+ },
+ {
+  "id": "display.hideToolActivity",
+  "tab": "appearance",
+  "label": "Hide Tool Activity"
+ },
+ {
+  "id": "display.showTokenUsage",
+  "tab": "appearance",
+  "label": "Show Token Usage"
+ },
+ {
+  "id": "display.showTurnTime",
+  "tab": "appearance",
+  "label": "Show Turn Time"
+ },
+ {
+  "id": "display.cacheMissMarker",
+  "tab": "appearance",
+  "label": "Cache Miss Marker"
+ },
+ {
+  "id": "display.shellVisualization",
+  "tab": "appearance",
+  "label": "Shell Visualization"
+ },
+ {
+  "id": "display.advisorCollapsedLines",
+  "tab": "appearance",
+  "label": "Advisor Collapsed Lines"
+ },
+ {
+  "id": "display.collapseCompacted",
+  "tab": "appearance",
+  "label": "Collapse Compacted History"
+ },
+ {
+  "id": "showHardwareCursor",
+  "tab": "appearance",
+  "label": "Show Hardware Cursor"
+ },
+ {
+  "id": "tui.imeSafeCursor",
+  "tab": "appearance",
+  "label": "IME-Safe Prompt Layout"
+ },
+ {
+  "id": "steeringMode",
+  "tab": "interaction",
+  "label": "Steering Mode"
+ },
+ {
+  "id": "followUpMode",
+  "tab": "interaction",
+  "label": "Follow-Up Mode"
+ },
+ {
+  "id": "interruptMode",
+  "tab": "interaction",
+  "label": "Interrupt Mode"
+ },
+ {
+  "id": "btw.inject",
+  "tab": "interaction",
+  "label": "/btw Steering Inject"
+ },
+ {
+  "id": "tui.vimMode",
+  "tab": "interaction",
+  "label": "Vim Editing Mode"
+ },
+ {
+  "id": "tui.vimModeDisplay",
+  "tab": "interaction",
+  "label": "Vim Mode Indicator"
+ },
+ {
+  "id": "loop.mode",
+  "tab": "interaction",
+  "label": "Loop Mode"
+ },
+ {
+  "id": "loop.conditionTimeoutMs",
+  "tab": "interaction",
+  "label": "Loop Condition Timeout (ms)"
+ },
+ {
+  "id": "composer.recallClearedDrafts",
+  "tab": "interaction",
+  "label": "Recall Cleared Drafts"
+ },
+ {
+  "id": "doubleEscapeAction",
+  "tab": "interaction",
+  "label": "Double-Escape Action"
+ },
+ {
+  "id": "input.bareExitOnEmptySession",
+  "tab": "interaction",
+  "label": "Bare Exit on Empty Session"
+ },
+ {
+  "id": "input.bareSlashCommands",
+  "tab": "interaction",
+  "label": "Bare Slash Commands"
+ },
+ {
+  "id": "treeFilterMode",
+  "tab": "interaction",
+  "label": "Session Tree Filter"
+ },
+ {
+  "id": "autocompleteMaxVisible",
+  "tab": "interaction",
+  "label": "Autocomplete Items"
+ },
+ {
+  "id": "spelling.typoDetection",
+  "tab": "interaction",
+  "label": "Typo Detection (macOS)"
+ },
+ {
+  "id": "spelling.autocomplete",
+  "tab": "interaction",
+  "label": "Word Autocomplete"
+ },
+ {
+  "id": "composer.predictions",
+  "tab": "interaction",
+  "label": "Composer Predictions"
+ },
+ {
+  "id": "composer.predictionAlternatives",
+  "tab": "interaction",
+  "label": "Prediction Alternatives"
+ },
+ {
+  "id": "spelling.autocorrect",
+  "tab": "interaction",
+  "label": "Autocorrect (macOS)"
+ },
+ {
+  "id": "emojiAutocomplete",
+  "tab": "interaction",
+  "label": "Emoji Autocomplete"
+ },
+ {
+  "id": "paste.largeMenuThreshold",
+  "tab": "interaction",
+  "label": "Large Paste Menu"
+ },
+ {
+  "id": "startup.quiet",
+  "tab": "interaction",
+  "label": "Quiet Startup"
+ },
+ {
+  "id": "startup.showSplash",
+  "tab": "interaction",
+  "label": "Show Startup Splash"
+ },
+ {
+  "id": "startup.setupWizard",
+  "tab": "interaction",
+  "label": "Setup Wizard"
+ },
+ {
+  "id": "startup.checkUpdate",
+  "tab": "interaction",
+  "label": "Check for Updates"
+ },
+ {
+  "id": "update.channel",
+  "tab": "interaction",
+  "label": "Update Channel"
+ },
+ {
+  "id": "update.auto",
+  "tab": "interaction",
+  "label": "Auto Update"
+ },
+ {
+  "id": "marketplace.autoUpdate",
+  "tab": "interaction",
+  "label": "Marketplace Auto-Update"
+ },
+ {
+  "id": "startup.changelogMode",
+  "tab": "interaction",
+  "label": "Startup Changelog"
+ },
+ {
+  "id": "magicKeywords.enabled",
+  "tab": "interaction",
+  "label": "Magic Keywords"
+ },
+ {
+  "id": "completion.notify",
+  "tab": "interaction",
+  "label": "Completion Notification"
+ },
+ {
+  "id": "error.notify",
+  "tab": "interaction",
+  "label": "Error Notification"
+ },
+ {
+  "id": "ask.timeout",
+  "tab": "interaction",
+  "label": "Ask Timeout"
+ },
+ {
+  "id": "ask.notify",
+  "tab": "interaction",
+  "label": "Ask Notification"
+ },
+ {
+  "id": "recap.enabled",
+  "tab": "interaction",
+  "label": "Idle Recap"
+ },
+ {
+  "id": "recap.idleSeconds",
+  "tab": "interaction",
+  "label": "Idle Recap Delay"
+ },
+ {
+  "id": "goal.enabled",
+  "tab": "tasks",
+  "label": "Goal Mode"
+ },
+ {
+  "id": "goal.statusInFooter",
+  "tab": "tasks",
+  "label": "Goal Status in Footer"
+ },
+ {
+  "id": "goal.continuationModes",
+  "tab": "tasks",
+  "label": "Goal Continuation Modes"
+ },
+ {
+  "id": "auth.unpausedProviders",
+  "tab": "providers",
+  "label": "Unpaused Providers"
+ },
+ {
+  "id": "modelRoleStorage",
+  "tab": "model",
+  "label": "Model Role Storage"
+ },
+ {
+  "id": "lsp.diagnosticsOnWrite",
+  "tab": "files",
+  "label": "Diagnostics on Write"
+ },
+ {
+  "id": "autolearn.enabled",
+  "tab": "memory",
+  "label": "Auto-Learn (experimental)"
+ },
+ {
+  "id": "autolearn.autoContinue",
+  "tab": "memory",
+  "label": "Auto-run capture at stop"
+ },
+ {
+  "id": "exa.enabled",
+  "tab": "providers",
+  "label": "Exa"
+ },
+ {
+  "id": "exa.searchDelayMs",
+  "tab": "providers",
+  "label": "Exa Search Delay"
+ },
+ {
+  "id": "searxng.endpoint",
+  "tab": "providers",
+  "label": "SearXNG Endpoint"
+ },
+ {
+  "id": "secrets.enabled",
+  "tab": "providers",
+  "label": "Hide Secrets"
+ },
+ {
+  "id": "disassembler.backend",
+  "tab": "tools",
+  "label": "Disassembler"
+ },
+ {
+  "id": "disassembler.maxOpen",
+  "tab": "tools",
+  "label": "Max Open Databases"
+ },
+ {
+  "id": "disassembler.idleCloseSec",
+  "tab": "tools",
+  "label": "Idle Close Timeout"
+ },
+ {
+  "id": "stream.serverUrl",
+  "tab": "interaction",
+  "label": "Stream Server"
+ },
+ {
+  "id": "stream.redactPatterns",
+  "tab": "interaction",
+  "label": "Extra Redaction Patterns"
+ },
+ {
+  "id": "title.icons",
+  "tab": "appearance",
+  "label": "Title Icons"
+ },
+ {
+  "id": "title.generator",
+  "tab": "tasks",
+  "label": "Title Generator"
+ },
+ {
+  "id": "title.refreshOnReplan",
+  "tab": "tasks",
+  "label": "Refresh Title on Replan"
+ },
+ {
+  "id": "title.refreshAfterPrompts",
+  "tab": "tasks",
+  "label": "Refresh Title After Prompts"
+ },
+ {
+  "id": "lsp.enabled",
+  "tab": "files",
+  "label": "LSP"
+ },
+ {
+  "id": "lsp.lazy",
+  "tab": "files",
+  "label": "Lazy LSP Startup"
+ },
+ {
+  "id": "lsp.shared",
+  "tab": "files",
+  "label": "Shared Language Servers"
+ },
+ {
+  "id": "lsp.formatOnWrite",
+  "tab": "files",
+  "label": "Format on Write"
+ },
+ {
+  "id": "lsp.diagnosticsOnWrite",
+  "tab": "files",
+  "label": "Diagnostics on Write"
+ },
+ {
+  "id": "lsp.diagnosticsOnEdit",
+  "tab": "files",
+  "label": "Diagnostics on Edit"
+ },
+ {
+  "id": "lsp.diagnosticsDeduplicate",
+  "tab": "files",
+  "label": "Deduplicate Diagnostics"
+ },
+ {
+  "id": "lsp.requestTimeout",
+  "tab": "files",
+  "label": "Request Timeout"
+ },
+ {
+  "id": "mcp.enableProjectConfig",
+  "tab": "tools",
+  "label": "MCP Project Config"
+ },
+ {
+  "id": "mcp.startupTimeoutMs",
+  "tab": "tools",
+  "label": "MCP Startup Window"
+ },
+ {
+  "id": "mcp.renderMarkdownResults",
+  "tab": "tools",
+  "label": "MCP Markdown Results"
+ },
+ {
+  "id": "mcp.notifications",
+  "tab": "tools",
+  "label": "MCP Update Injection"
+ },
+ {
+  "id": "mcp.notificationDebounceMs",
+  "tab": "tools",
+  "label": "MCP Notification Debounce"
+ },
+ {
+  "id": "edit.mode",
+  "tab": "files",
+  "label": "Edit Mode"
+ },
+ {
+  "id": "edit.fuzzyMatch",
+  "tab": "files",
+  "label": "Fuzzy Match"
+ },
+ {
+  "id": "edit.fuzzyThreshold",
+  "tab": "files",
+  "label": "Fuzzy Match Threshold"
+ },
+ {
+  "id": "edit.streamingAbort",
+  "tab": "files",
+  "label": "Abort on Failed Preview"
+ },
+ {
+  "id": "edit.recoverInlineEdits",
+  "tab": "files",
+  "label": "Recover Inline Edit Payloads"
+ },
+ {
+  "id": "edit.blockAutoGenerated",
+  "tab": "files",
+  "label": "Block Auto-Generated Files"
+ },
+ {
+  "id": "edit.enforceSeenLines",
+  "tab": "files",
+  "label": "Enforce Seen-Line Guard"
+ },
+ {
+  "id": "edit.blackbox.enabled",
+  "tab": "files",
+  "label": "Record Parse Regressions"
+ },
+ {
+  "id": "edit.autoRepair.enabled",
+  "tab": "files",
+  "label": "Auto-Repair Parse Regressions"
+ },
+ {
+  "id": "ida.python",
+  "tab": "tools",
+  "label": "IDA Python"
+ },
+ {
+  "id": "ida.installDir",
+  "tab": "tools",
+  "label": "IDA Install Dir"
+ },
+ {
+  "id": "sharpshooter.model",
+  "tab": "memory",
+  "label": "Sharpshooter Model"
+ },
+ {
+  "id": "memory.backend",
+  "tab": "memory",
+  "label": "Memory Backend"
+ },
+ {
+  "id": "collab.relayUrl",
+  "tab": "interaction",
+  "label": "Relay URL"
+ },
+ {
+  "id": "collab.webUrl",
+  "tab": "interaction",
+  "label": "Web UI URL"
+ },
+ {
+  "id": "collab.displayName",
+  "tab": "interaction",
+  "label": "Display Name"
+ },
+ {
+  "id": "collab.autoStart",
+  "tab": "interaction",
+  "label": "Auto Start"
+ },
+ {
+  "id": "images.urls.enabled",
+  "tab": "model",
+  "label": "Serve Images as URLs"
+ },
+ {
+  "id": "images.urls.backends",
+  "tab": "model",
+  "label": "Image URL Backends"
+ },
+ {
+  "id": "images.urls.command",
+  "tab": "model",
+  "label": "Image Upload Command"
+ },
+ {
+  "id": "images.urls.publicBaseUrl",
+  "tab": "model",
+  "label": "Image URL Public Base"
+ },
+ {
+  "id": "images.urls.ttlHours",
+  "tab": "model",
+  "label": "Image URL Lifetime (hours)"
+ },
+ {
+  "id": "images.urls.bindHost",
+  "tab": "model",
+  "label": "Image URL Bind Host"
+ },
+ {
+  "id": "images.urls.sshTarget",
+  "tab": "model",
+  "label": "Image URL SSH Target"
+ },
+ {
+  "id": "images.urls.sshRemotePort",
+  "tab": "model",
+  "label": "Image URL SSH Remote Port"
+ },
+ {
+  "id": "plan.enabled",
+  "tab": "tasks",
+  "label": "Plan Mode"
+ },
+ {
+  "id": "plan.defaultOnStartup",
+  "tab": "tasks",
+  "label": "Start in Plan Mode"
+ },
+ {
+  "id": "plan.autosave",
+  "tab": "tasks",
+  "label": "Autosave Plans"
+ },
+ {
+  "id": "plan.autosaveDir",
+  "tab": "tasks",
+  "label": "Autosave Directory"
+ },
+ {
+  "id": "live.voice",
+  "tab": "providers",
+  "label": "Live Voice"
+ },
+ {
+  "id": "live.endpoint",
+  "tab": "providers",
+  "label": "Live Endpoint"
+ },
+ {
+  "id": "live.apiKey",
+  "tab": "providers",
+  "label": "Live Endpoint API Key"
+ },
+ {
+  "id": "tts.localVoice",
+  "tab": "providers",
+  "label": "Local TTS Voice"
+ },
+ {
+  "id": "tts.localSpeed",
+  "tab": "providers",
+  "label": "Local TTS Speed"
+ },
+ {
+  "id": "speech.enabled",
+  "tab": "providers",
+  "label": "Speech Vocalization"
+ },
+ {
+  "id": "speech.mode",
+  "tab": "providers",
+  "label": "Speech Vocalization Mode"
+ },
+ {
+  "id": "speech.enhanced",
+  "tab": "providers",
+  "label": "Enhanced Speech Rewriting"
+ },
+ {
+  "id": "speech.voice",
+  "tab": "providers",
+  "label": "Speech Vocalization Voice"
+ },
+ {
+  "id": "speech.speed",
+  "tab": "providers",
+  "label": "Speech Vocalization Speed"
+ },
+ {
+  "id": "task.isolation.enabled",
+  "tab": "tasks",
+  "label": "Allow Isolated Subagents"
+ },
+ {
+  "id": "isolation.backend",
+  "tab": "tasks",
+  "label": "Isolation Backend"
+ },
+ {
+  "id": "worktree.clone",
+  "tab": "tasks",
+  "label": "Clone Checkout into Worktrees"
+ },
+ {
+  "id": "worktree.cleanSource",
+  "tab": "tasks",
+  "label": "Clean Source Checkout on /wt"
+ },
+ {
+  "id": "worktree.onStart",
+  "tab": "tasks",
+  "label": "Worktree on Start"
+ },
+ {
+  "id": "worktree.onExit",
+  "tab": "tasks",
+  "label": "Worktree on Exit"
+ },
+ {
+  "id": "task.isolation.apply",
+  "tab": "tasks",
+  "label": "Apply Isolated Changes"
+ },
+ {
+  "id": "ovnfs.path",
+  "tab": "tasks",
+  "label": "ovnfs Binary"
+ },
+ {
+  "id": "task.isolation.merge",
+  "tab": "tasks",
+  "label": "Isolation Merge Strategy"
+ },
+ {
+  "id": "task.isolation.commits",
+  "tab": "tasks",
+  "label": "Isolation Commit Style"
+ },
+ {
+  "id": "worktree.base",
+  "tab": "tasks",
+  "label": "Worktree Base Directory"
+ },
+ {
+  "id": "task.eager",
+  "tab": "tasks",
+  "label": "Prefer Task Delegation"
+ },
+ {
+  "id": "task.autoParallel",
+  "tab": "tasks",
+  "label": "Auto Parallel"
+ },
+ {
+  "id": "task.batch",
+  "tab": "tasks",
+  "label": "Batch Task Calls"
+ },
+ {
+  "id": "task.steps",
+  "tab": "tasks",
+  "label": "Sequential Task Steps"
+ },
+ {
+  "id": "task.structured",
+  "tab": "tasks",
+  "label": "Structured Task Results"
+ },
+ {
+  "id": "task.speculativeLaunch",
+  "tab": "tasks",
+  "label": "Speculative Task Launch"
+ },
+ {
+  "id": "task.enableEffort",
+  "tab": "tasks",
+  "label": "Per-Task Effort"
+ },
+ {
+  "id": "task.perCallModel",
+  "tab": "tasks",
+  "label": "Per-Call Model"
+ },
+ {
+  "id": "task.perCallModelAllow",
+  "tab": "tasks",
+  "label": "Per-Call Model Allowlist"
+ },
+ {
+  "id": "task.maxConcurrency",
+  "tab": "tasks",
+  "label": "Max Concurrent Tasks"
+ },
+ {
+  "id": "task.workerThreads",
+  "tab": "tasks",
+  "label": "Subagent Worker Threads"
+ },
+ {
+  "id": "task.enableLsp",
+  "tab": "tasks",
+  "label": "LSP in Subagents"
+ },
+ {
+  "id": "task.maxRecursionDepth",
+  "tab": "tasks",
+  "label": "Max Task Recursion"
+ },
+ {
+  "id": "task.maxRuntimeMs",
+  "tab": "tasks",
+  "label": "Max Subagent Runtime"
+ },
+ {
+  "id": "task.completionProbe",
+  "tab": "tasks",
+  "label": "Subagent Completion Probe"
+ },
+ {
+  "id": "task.agentIdleTtlMs",
+  "tab": "tasks",
+  "label": "Agent Idle TTL"
+ },
+ {
+  "id": "task.softRequestBudget",
+  "tab": "tasks",
+  "label": "Soft Subagent Request Budget"
+ },
+ {
+  "id": "task.softRequestBudgetNotice",
+  "tab": "tasks",
+  "label": "Soft Request Budget Notice"
+ },
+ {
+  "id": "task.maxEffort",
+  "tab": "tasks",
+  "label": "Maximum Per-Spawn Effort"
+ },
+ {
+  "id": "task.prewalk",
+  "tab": "tasks",
+  "label": "Generic Task Prewalk"
+ },
+ {
+  "id": "task.showResolvedModelBadge",
+  "tab": "appearance",
+  "label": "Show Resolved Model Badge"
+ },
+ {
+  "id": "bash.enabled",
+  "tab": "shell",
+  "label": "Bash"
+ },
+ {
+  "id": "bash.allowCompoundCommands",
+  "tab": "shell",
+  "label": "Allow Compound Commands"
+ },
+ {
+  "id": "bash.autoBackground.enabled",
+  "tab": "shell",
+  "label": "Bash Auto-Background"
+ },
+ {
+  "id": "bash.gitGuard",
+  "tab": "shell",
+  "label": "Git Guard"
+ },
+ {
+  "id": "bash.patterns",
+  "tab": "shell",
+  "label": "Bash Approval Patterns"
+ },
+ {
+  "id": "bash.allowedEnvVars",
+  "tab": "shell",
+  "label": "Bash Allowed Environment Variables"
+ },
+ {
+  "id": "bashInterceptor.enabled",
+  "tab": "shell",
+  "label": "Bash Interceptor"
+ },
+ {
+  "id": "bash.direnv",
+  "tab": "shell",
+  "label": "direnv Auto-Load"
+ },
+ {
+  "id": "bash.direnvLoadTimeoutMs",
+  "tab": "shell",
+  "label": "direnv Load Timeout (ms)"
+ },
+ {
+  "id": "shellMinimizer.enabled",
+  "tab": "shell",
+  "label": "Shell Minimizer"
+ },
+ {
+  "id": "shellMinimizer.sourceOutlineLevel",
+  "tab": "shell",
+  "label": "Shell Minimizer Source Outline"
+ },
+ {
+  "id": "ghidra.installDir",
+  "tab": "tools",
+  "label": "Ghidra Install Dir"
+ },
+ {
+  "id": "ghidra.python",
+  "tab": "tools",
+  "label": "Ghidra Python"
+ },
+ {
+  "id": "share.serverUrl",
+  "tab": "interaction",
+  "label": "Share Server"
+ },
+ {
+  "id": "share.store",
+  "tab": "interaction",
+  "label": "Share Store"
+ },
+ {
+  "id": "share.redactSecrets",
+  "tab": "interaction",
+  "label": "Share Secret Redaction"
+ },
+ {
+  "id": "telemetry.otlpExportEnabled",
+  "tab": "providers",
+  "label": "OTLP Telemetry Export"
+ },
+ {
+  "id": "skills.registryUrl",
+  "tab": "interaction",
+  "label": "Skill Registry"
+ },
+ {
+  "id": "skills.enableSkillCommands",
+  "tab": "tasks",
+  "label": "Skill Commands"
+ },
+ {
+  "id": "commands.enableClaudeUser",
+  "tab": "tasks",
+  "label": "Claude User Commands"
+ },
+ {
+  "id": "commands.enableClaudeProject",
+  "tab": "tasks",
+  "label": "Claude Project Commands"
+ },
+ {
+  "id": "commands.enableOpencodeUser",
+  "tab": "tasks",
+  "label": "OpenCode User Commands"
+ },
+ {
+  "id": "commands.enableOpencodeProject",
+  "tab": "tasks",
+  "label": "OpenCode Project Commands"
+ },
+ {
+  "id": "extensionHandlers.toolCallTimeoutMs",
+  "tab": "tools",
+  "label": "Tool Call Handler Timeout (ms)"
+ },
+ {
+  "id": "extensionHandlers.modeControl",
+  "tab": "tools",
+  "label": "Extension Mode Control"
+ },
+ {
+  "id": "extensionRenderers.assistantText",
+  "tab": "tools",
+  "label": "Extension Reply Renderers"
+ },
+ {
+  "id": "extensionRenderers.transcriptPresenters",
+  "tab": "tools",
+  "label": "Extension Transcript Presenters"
+ },
+ {
+  "id": "eval.py",
+  "tab": "shell",
+  "label": "Python Eval Backend"
+ },
+ {
+  "id": "eval.js",
+  "tab": "shell",
+  "label": "JavaScript Eval Backend"
+ },
+ {
+  "id": "eval.autoProvision",
+  "tab": "shell",
+  "label": "Eval Environment Provisioning"
+ },
+ {
+  "id": "eval.tools.enabled",
+  "tab": "shell",
+  "label": "Eval-Defined Tools"
+ },
+ {
+  "id": "eval.workpool.freshAgents",
+  "tab": "shell",
+  "label": "Fresh Workpool Agents"
+ },
+ {
+  "id": "eval.autoBackground.enabled",
+  "tab": "shell",
+  "label": "Eval Auto-Background"
+ },
+ {
+  "id": "python.kernelMode",
+  "tab": "shell",
+  "label": "Python Kernel Mode"
+ },
+ {
+  "id": "python.interpreter",
+  "tab": "shell",
+  "label": "Python Interpreter"
+ },
+ {
+  "id": "ttsr.enabled",
+  "tab": "context",
+  "label": "TTSR"
+ },
+ {
+  "id": "ttsr.judge",
+  "tab": "context",
+  "label": "Judged Rules"
+ },
+ {
+  "id": "ttsr.contextMode",
+  "tab": "context",
+  "label": "TTSR Context Mode"
+ },
+ {
+  "id": "ttsr.interruptMode",
+  "tab": "context",
+  "label": "TTSR Interrupt Mode"
+ },
+ {
+  "id": "ttsr.repeatMode",
+  "tab": "context",
+  "label": "TTSR Repeat Mode"
+ },
+ {
+  "id": "ttsr.repeatGap",
+  "tab": "context",
+  "label": "TTSR Repeat Gap"
+ },
+ {
+  "id": "ttsr.builtinRules",
+  "tab": "context",
+  "label": "Built-in Rules"
+ },
+ {
+  "id": "ttsr.disabledRules",
+  "tab": "context",
+  "label": "Disabled Rules"
+ },
+ {
+  "id": "mnemopi.dbPath",
+  "tab": "memory",
+  "label": "Mnemopi DB Path"
+ },
+ {
+  "id": "mnemopi.bank",
+  "tab": "memory",
+  "label": "Mnemopi Bank"
+ },
+ {
+  "id": "mnemopi.scoping",
+  "tab": "memory",
+  "label": "Mnemopi Scoping"
+ },
+ {
+  "id": "mnemopi.embeddingVariant",
+  "tab": "memory",
+  "label": "Embedding variant"
+ },
+ {
+  "id": "mnemopi.autoRecall",
+  "tab": "memory",
+  "label": "Mnemopi Auto Recall"
+ },
+ {
+  "id": "mnemopi.recallRelevance",
+  "tab": "memory",
+  "label": "Mnemopi Recall Relevance"
+ },
+ {
+  "id": "mnemopi.autoRetain",
+  "tab": "memory",
+  "label": "Mnemopi Auto Retain"
+ },
+ {
+  "id": "mnemopi.polyphonicRecall",
+  "tab": "memory",
+  "label": "Mnemopi Polyphonic Recall"
+ },
+ {
+  "id": "mnemopi.enhancedRecall",
+  "tab": "memory",
+  "label": "Mnemopi Enhanced Recall"
+ },
+ {
+  "id": "mnemopi.proactiveLinking",
+  "tab": "memory",
+  "label": "Mnemopi Proactive Linking"
+ },
+ {
+  "id": "mnemopi.noEmbeddings",
+  "tab": "memory",
+  "label": "Mnemopi Disable Embeddings"
+ },
+ {
+  "id": "mnemopi.embeddingModel",
+  "tab": "memory",
+  "label": "Mnemopi Embedding Model"
+ },
+ {
+  "id": "mnemopi.embeddingApiUrl",
+  "tab": "memory",
+  "label": "Mnemopi Embedding API URL"
+ },
+ {
+  "id": "mnemopi.embeddingApiKey",
+  "tab": "memory",
+  "label": "Mnemopi Embedding API Key"
+ },
+ {
+  "id": "mnemopi.embeddingQueryPrefix",
+  "tab": "memory",
+  "label": "Mnemopi Embedding Query Prefix"
+ },
+ {
+  "id": "mnemopi.embeddingInputType",
+  "tab": "memory",
+  "label": "Mnemopi Embedding Input Type"
+ },
+ {
+  "id": "mnemopi.llmMode",
+  "tab": "memory",
+  "label": "Mnemopi LLM Mode"
+ },
+ {
+  "id": "mnemopi.llmBaseUrl",
+  "tab": "memory",
+  "label": "Mnemopi LLM Base URL"
+ },
+ {
+  "id": "mnemopi.llmApiKey",
+  "tab": "memory",
+  "label": "Mnemopi LLM API Key"
+ },
+ {
+  "id": "mnemopi.llmModel",
+  "tab": "memory",
+  "label": "Mnemopi LLM Model"
+ },
+ {
+  "id": "stt.enabled",
+  "tab": "interaction",
+  "label": "Speech-to-Text"
+ },
+ {
+  "id": "stt.submitTrigger",
+  "tab": "interaction",
+  "label": "Speech-to-Text Submit Trigger"
+ },
+ {
+  "id": "session.worktreeScope",
+  "tab": "interaction",
+  "label": "Resume Worktree Scope"
+ },
+ {
+  "id": "power.sleepPrevention",
+  "tab": "interaction",
+  "label": "Sleep Prevention"
+ },
+ {
+  "id": "prewalk.enabled",
+  "tab": "model",
+  "label": "Enable Prewalk"
+ },
+ {
+  "id": "prewalk.from",
+  "tab": "model",
+  "label": "Prewalk planning model"
+ },
+ {
+  "id": "prewalk.into",
+  "tab": "model",
+  "label": "Prewalk target"
+ },
+ {
+  "id": "prewalk.auto",
+  "tab": "model",
+  "label": "Auto Prewalk"
+ },
+ {
+  "id": "prewalk.autoTarget",
+  "tab": "model",
+  "label": "Auto-prewalk target"
+ },
+ {
+  "id": "providers.maxInFlightRequests",
+  "tab": "providers",
+  "label": "Max In-Flight Requests"
+ },
+ {
+  "id": "images.describeForTextModels",
+  "tab": "model",
+  "label": "Describe Images for Text Models"
+ },
+ {
+  "id": "defaultThinkingLevel",
+  "tab": "model",
+  "label": "Thinking Level"
+ },
+ {
+  "id": "hideThinkingBlock",
+  "tab": "model",
+  "label": "Hide Thinking Blocks"
+ },
+ {
+  "id": "expandThinkingBlocks",
+  "tab": "model",
+  "label": "Expand Thinking Blocks"
+ },
+ {
+  "id": "proseOnlyThinking",
+  "tab": "model",
+  "label": "Prose Only Thinking"
+ },
+ {
+  "id": "omitThinking",
+  "tab": "model",
+  "label": "Omit Thinking summaries"
+ },
+ {
+  "id": "externalThinking",
+  "tab": "model",
+  "label": "External Thinking"
+ },
+ {
+  "id": "model.loopGuard.enabled",
+  "tab": "model",
+  "label": "Loop Guard"
+ },
+ {
+  "id": "model.loopGuard.checkAssistantContent",
+  "tab": "model",
+  "label": "Loop Guard Scan Prose"
+ },
+ {
+  "id": "model.loopGuard.toolCallReminder",
+  "tab": "model",
+  "label": "Loop Guard Tool-Call Reminder"
+ },
+ {
+  "id": "model.toolCallLoopGuard.enabled",
+  "tab": "model",
+  "label": "Tool-Call Loop Guard"
+ },
+ {
+  "id": "model.toolCallLoopGuard.threshold",
+  "tab": "model",
+  "label": "Tool-Call Loop Threshold"
+ },
+ {
+  "id": "model.toolCallLoopGuard.exemptTools",
+  "tab": "model",
+  "label": "Tool-Call Loop Exempt Tools"
+ },
+ {
+  "id": "inlineToolDescriptors",
+  "tab": "model",
+  "label": "Inline Tool Descriptors"
+ },
+ {
+  "id": "includeModelInPrompt",
+  "tab": "model",
+  "label": "Include Model in Prompt"
+ },
+ {
+  "id": "includeWorkspaceTree",
+  "tab": "model",
+  "label": "Include Workspace Tree"
+ },
+ {
+  "id": "encourageEdits",
+  "tab": "model",
+  "label": "Encourage Edits"
+ },
+ {
+  "id": "skillful",
+  "tab": "model",
+  "label": "List Skills in Prompt"
+ },
+ {
+  "id": "personality",
+  "tab": "model",
+  "label": "Personality"
+ },
+ {
+  "id": "temperature",
+  "tab": "model",
+  "label": "Temperature"
+ },
+ {
+  "id": "topP",
+  "tab": "model",
+  "label": "Top P"
+ },
+ {
+  "id": "topK",
+  "tab": "model",
+  "label": "Top K"
+ },
+ {
+  "id": "minP",
+  "tab": "model",
+  "label": "Min P"
+ },
+ {
+  "id": "presencePenalty",
+  "tab": "model",
+  "label": "Presence Penalty"
+ },
+ {
+  "id": "repetitionPenalty",
+  "tab": "model",
+  "label": "Repetition Penalty"
+ },
+ {
+  "id": "textVerbosity",
+  "tab": "model",
+  "label": "Text Verbosity"
+ },
+ {
+  "id": "tier.openai",
+  "tab": "model",
+  "label": "Service Tier — OpenAI"
+ },
+ {
+  "id": "tier.anthropic",
+  "tab": "model",
+  "label": "Service Tier — Anthropic"
+ },
+ {
+  "id": "tier.google",
+  "tab": "model",
+  "label": "Service Tier — Google"
+ },
+ {
+  "id": "tier.subagent",
+  "tab": "model",
+  "label": "Service Tier — Subagent"
+ },
+ {
+  "id": "tier.advisor",
+  "tab": "model",
+  "label": "Service Tier — Advisor"
+ },
+ {
+  "id": "retry.maxRetries",
+  "tab": "model",
+  "label": "Retry Attempts"
+ },
+ {
+  "id": "retry.maxDelayMs",
+  "tab": "model",
+  "label": "Max Retry Delay"
+ },
+ {
+  "id": "retry.waitForUsageReset",
+  "tab": "model",
+  "label": "Wait For Usage Reset"
+ },
+ {
+  "id": "retry.modelFallback",
+  "tab": "model",
+  "label": "Retry Model Fallback"
+ },
+ {
+  "id": "retry.fallbackOn",
+  "tab": "model",
+  "label": "Fallback Trigger"
+ },
+ {
+  "id": "retry.rateLimitWalksChain",
+  "tab": "model",
+  "label": "Rate Limit Walks Chain"
+ },
+ {
+  "id": "retry.usageAwareFallback",
+  "tab": "model",
+  "label": "Usage-Aware Fallback"
+ },
+ {
+  "id": "retry.usageReservePct",
+  "tab": "model",
+  "label": "Reserve Margin"
+ },
+ {
+  "id": "retry.usageReservePolicy",
+  "tab": "model",
+  "label": "Reserve Policy"
+ },
+ {
+  "id": "retry.fallbackChains",
+  "tab": "model",
+  "label": "Retry Fallback Chains"
+ },
+ {
+  "id": "retry.fallbackRevertPolicy",
+  "tab": "model",
+  "label": "Fallback Revert Policy"
+ },
+ {
+  "id": "providers.anthropic.serverSideFallback",
+  "tab": "model",
+  "label": "Anthropic Server-Side Fallback (Fable 5)"
+ },
+ {
+  "id": "providers.ollama-cloud.maxConcurrency",
+  "tab": "providers",
+  "label": "Ollama Cloud Max Concurrency"
+ },
+ {
+  "id": "providers.webSearchTimeoutSeconds",
+  "tab": "providers",
+  "label": "Web Search Timeout"
+ },
+ {
+  "id": "providers.antigravityEndpoint",
+  "tab": "providers",
+  "label": "Antigravity Endpoint Mode"
+ },
+ {
+  "id": "providers.fireworksTier",
+  "tab": "providers",
+  "label": "Fireworks Tier"
+ },
+ {
+  "id": "providers.tinyModelDevice",
+  "tab": "providers",
+  "label": "Tiny Model Device"
+ },
+ {
+  "id": "providers.tinyModelDtype",
+  "tab": "providers",
+  "label": "Tiny Model Precision"
+ },
+ {
+  "id": "providers.autoThinkingMaxEffort",
+  "tab": "model",
+  "label": "Auto Thinking Ceiling"
+ },
+ {
+  "id": "features.unexpectedStopDetection",
+  "tab": "interaction",
+  "label": "Unexpected Stops"
+ },
+ {
+  "id": "providers.kimiApiFormat",
+  "tab": "providers",
+  "label": "Kimi API Format"
+ },
+ {
+  "id": "providers.openaiWebsockets",
+  "tab": "providers",
+  "label": "OpenAI Codex WebSockets"
+ },
+ {
+  "id": "providers.openaiResponsesWebsockets",
+  "tab": "providers",
+  "label": "OpenAI Responses WebSockets"
+ },
+ {
+  "id": "providers.openaiLiveSteering",
+  "tab": "providers",
+  "label": "OpenAI Live Steering"
+ },
+ {
+  "id": "providers.muse-code.storeResponses",
+  "tab": "providers",
+  "label": "Muse Code Stored Responses"
+ },
+ {
+  "id": "providers.openai-codex.daybreak",
+  "tab": "providers",
+  "label": "Codex Daybreak Blue"
+ },
+ {
+  "id": "providers.cacheRetention",
+  "tab": "providers",
+  "label": "Prompt Cache Retention"
+ },
+ {
+  "id": "providers.cacheWarming",
+  "tab": "providers",
+  "label": "Cache Warming"
+ },
+ {
+  "id": "providers.streamFirstEventTimeoutSeconds",
+  "tab": "providers",
+  "label": "Stream First Event Timeout"
+ },
+ {
+  "id": "providers.streamIdleTimeoutSeconds",
+  "tab": "providers",
+  "label": "Stream Idle Timeout"
+ },
+ {
+  "id": "providers.openrouterVariant",
+  "tab": "providers",
+  "label": "OpenRouter Routing"
+ },
+ {
+  "id": "providers.fetch",
+  "tab": "providers",
+  "label": "Fetch Provider"
+ },
+ {
+  "id": "providers.webKeyless",
+  "tab": "providers",
+  "label": "Keyless Web Services"
+ },
+ {
+  "id": "codexResets.minBlockedMinutes",
+  "tab": "providers",
+  "label": "Codex Auto-Redeem Min Block"
+ },
+ {
+  "id": "codexResets.keepCredits",
+  "tab": "providers",
+  "label": "Codex Auto-Redeem Reserve"
+ },
+ {
+  "id": "codexResets.salvageHorizonHours",
+  "tab": "providers",
+  "label": "Codex Reset Salvage Horizon"
+ },
+ {
+  "id": "claudeResets.minBlockedMinutes",
+  "tab": "providers",
+  "label": "Claude Auto-Redeem Min Block"
+ },
+ {
+  "id": "claudeResets.keepCredits",
+  "tab": "providers",
+  "label": "Claude Auto-Redeem Reserve"
+ },
+ {
+  "id": "claudeResets.salvageHorizonHours",
+  "tab": "providers",
+  "label": "Claude Reset Salvage Horizon"
+ },
+ {
+  "id": "provider.appendOnlyContext",
+  "tab": "providers",
+  "label": "Append-Only Context"
+ },
+ {
+  "id": "workspace.additionalDirectories",
+  "tab": "context",
+  "label": "Additional Workspace Dirs"
+ },
+ {
+  "id": "contextFiles.extra",
+  "tab": "context",
+  "label": "Extra Context Files"
+ },
+ {
+  "id": "contextPromotion.enabled",
+  "tab": "context",
+  "label": "Auto-Promote Context"
+ },
+ {
+  "id": "extendedContext",
+  "tab": "context",
+  "label": "Extended Context"
+ },
+ {
+  "id": "compaction.enabled",
+  "tab": "context",
+  "label": "Auto-Compact"
+ },
+ {
+  "id": "compaction.experimentalContextManagement",
+  "tab": "context",
+  "label": "Notes-backed context windows (experimental)"
+ },
+ {
+  "id": "compaction.midTurnEnabled",
+  "tab": "context",
+  "label": "Mid-Turn Compaction"
+ },
+ {
+  "id": "compaction.methodOrder",
+  "tab": "context",
+  "label": "Compaction Method Order"
+ },
+ {
+  "id": "compaction.thresholdPercent",
+  "tab": "context",
+  "label": "Compaction Threshold"
+ },
+ {
+  "id": "compaction.thresholdTokens",
+  "tab": "context",
+  "label": "Compaction Token Limit"
+ },
+ {
+  "id": "compaction.handoffSaveToDisk",
+  "tab": "context",
+  "label": "Save Handoff Docs"
+ },
+ {
+  "id": "compaction.remoteStreamingV2Enabled",
+  "tab": "context",
+  "label": "Remote Compaction V2"
+ },
+ {
+  "id": "compaction.asyncEnabled",
+  "tab": "context",
+  "label": "Async Compaction"
+ },
+ {
+  "id": "compaction.idleEnabled",
+  "tab": "context",
+  "label": "Idle Compaction"
+ },
+ {
+  "id": "compaction.idleThresholdTokens",
+  "tab": "context",
+  "label": "Idle Compaction Threshold"
+ },
+ {
+  "id": "compaction.idleTimeoutSeconds",
+  "tab": "context",
+  "label": "Idle Compaction Delay"
+ },
+ {
+  "id": "compaction.supersedeReads",
+  "tab": "context",
+  "label": "Supersede Stale Reads"
+ },
+ {
+  "id": "compaction.dropUseless",
+  "tab": "context",
+  "label": "Elide Uneventful Results"
+ },
+ {
+  "id": "snapcompact.systemPrompt",
+  "tab": "context",
+  "label": "Snapcompact System Prompt"
+ },
+ {
+  "id": "snapcompact.toolResults",
+  "tab": "context",
+  "label": "Snapcompact Tool Results"
+ },
+ {
+  "id": "tools.format",
+  "tab": "context",
+  "label": "Tool Calling Mode"
+ },
+ {
+  "id": "snapcompact.shape",
+  "tab": "context",
+  "label": "Snapcompact Shape"
+ },
+ {
+  "id": "branchSummary.enabled",
+  "tab": "context",
+  "label": "Branch Summaries"
+ }
+]
