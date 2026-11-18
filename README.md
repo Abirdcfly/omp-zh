@@ -21,7 +21,7 @@
 
 ## 环境要求
 
-- `omp` **18.22.2**（`omp --version` 应输出 `omp/18.22.2`）；
+- `omp` **18.22.2** 是实测基线（`omp --version` 输出 `omp/18.22.2`）；
 - `omp` 自身以 TypeScript 源码方式加载扩展，无需预编译。
 
 ## 安装
@@ -90,9 +90,36 @@ bun scripts/extract-omp.ts <oh-my-pi 源码目录>  # 从上游源码重抽设�
 
 `scripts/coverage.ts` 优先读运行时 registry，读不到就回退到 `scripts/manifest/settings-18.22.2.json`（18.22.2 的离线快照），存在缺口时退出码为 1，适合放进 CI。
 
+## 版本与兼容
+
+**18.22.2 是实测基线，不是 `omp` 的硬性版本门槛。** `omp` 加载扩展时只做「import 模块 → 调用导出的工厂函数」，不读取也不校验 `package.json` 的 `engines` 字段，所以升级到更高版本后依然可以安装、依然会被加载。
+
+真正决定汉化是否生效的，是下面三处上游接口是否还在。插件对每一处都做了防御式降级——接口变了只是那块区域退回英文，不会让 `omp` 启动失败：
+
+| 上游变化 | 结果 |
+| --- | --- |
+| 新增设置项 / 命令 / 文案 | 照常工作；新条目显示英文（词表里没有对应 id），用 `capture` 收集后补词表即可 |
+| 设置项 id 改名或删除 | 旧词条失效但不报错，`scripts/coverage.ts` 会把缺口逐条列出来 |
+| `config/registry` 或设置项 `ui` 结构变化 | 设置面板退回英文（标签页名可能仍为中文，取决于下一行那个包） |
+| `@oh-my-pi/pi-tui/overlays/settings-defs` 改名或移除 | 标签页名、导语、分组退回英文，设置条目本身仍是中文 |
+| `BUILTIN_SLASH_COMMANDS_INTERNAL` 改名 | 命令说明退回英文，命令本身照常可用 |
+| 根包不再导出 `Text` | 对话框、命令报告等界面文案退回英文 |
+| 任一注入面在运行时抛异常 | 只有该区域降级，`/zh-cn status` 会显示「降级（上游接口不匹配）」，其余区域继续中文 |
+
+升级 `omp` 后的自查顺序：
+
+```bash
+bun scripts/extract-omp.ts <oh-my-pi 源码目录>   # 重新抽取新版清单
+bun scripts/coverage.ts                          # 看哪些 id 掉出了词表
+```
+
+再在 `omp` 里执行 `/zh-cn status` 看三块补丁的改写数量，必要时用 `/zh-cn capture on` 把漏掉的界面文案收集到 `<agentDir>/omp-zh-missing.log`。
+
+反过来，若安装的是低于 18.22.2 的版本：插件不保证完全生效，同样靠上面两步自查；`omp` 不会因为版本不符而拒绝加载。
+
 ## 版本策略
 
-- 插件锁 `engines.omp = 18.22.2`；上游改动设置项或文案后，跑 `bun scripts/extract-omp.ts` 与 `bun scripts/coverage.ts` 就能看出缺口。
+- 词表按 18.22.2 的清单编写，`engines.omp` 声明 `>=18.22.2`；上游改动设置项或文案后，跑 `bun scripts/extract-omp.ts` 与 `bun scripts/coverage.ts` 就能看出缺口。
 - 所有改写都记录还原点，`/zh-cn off` 会逐条还原，不会留下半汉化状态。
 
 ## 许可

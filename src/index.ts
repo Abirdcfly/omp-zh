@@ -43,29 +43,45 @@ function summarize(translator: Translator): string {
 
 function applyAll(translator: Translator, config: ZhConfig): string {
 	const parts: string[] = [];
+	// 上游升级可能改动注入面：单个区域出错时只让该区域退回英文，
+	// 不能让异常冒到扩展工厂，否则整个插件会被 omp 判定为加载失败。
+	const step = (label: string, fn: () => void) => {
+		try {
+			fn();
+		} catch {
+			parts.push(`${label}降级（上游接口不匹配）`);
+		}
+	};
+
 	if (scopeIncludes(config, "settings")) {
-		const stats = singleton.settings.apply(translator);
-		parts.push(`设置项 ${stats.settings}`);
+		step("设置面板", () => {
+			const stats = singleton.settings.apply(translator);
+			parts.push(`设置项 ${stats.settings}`);
+		});
 	}
 	if (scopeIncludes(config, "commands")) {
-		const stats = singleton.commands.apply(translator);
-		parts.push(`命令 ${stats.commands} / 子命令 ${stats.subcommands}`);
+		step("命令说明", () => {
+			const stats = singleton.commands.apply(translator);
+			parts.push(`命令 ${stats.commands} / 子命令 ${stats.subcommands}`);
+		});
 	}
 	// 无论当前范围如何都安装补丁：生效与否由闭包读取最新配置决定，
 	// 这样 /zh-cn on 或切换范围后无需重启即可恢复。
-	const chromeStats = singleton.chrome.apply(
-		translator,
-		() => {
-			const current = singleton.config ?? config;
-			return current.enabled && current.chrome && (current.scope === "all" || current.scope === "chrome");
-		},
-		(singleton.config ?? config).capture,
-	);
-	if (chromeStats.active) {
-		parts.push(config.chrome && scopeIncludes(config, "chrome") ? "界面文案已接管" : "界面文案待命");
-	} else {
-		parts.push("界面文案未接管");
-	}
+	step("界面文案", () => {
+		const chromeStats = singleton.chrome.apply(
+			translator,
+			() => {
+				const current = singleton.config ?? config;
+				return current.enabled && current.chrome && (current.scope === "all" || current.scope === "chrome");
+			},
+			(singleton.config ?? config).capture,
+		);
+		if (chromeStats.active) {
+			parts.push(config.chrome && scopeIncludes(config, "chrome") ? "界面文案已接管" : "界面文案待命");
+		} else {
+			parts.push("界面文案未接管");
+		}
+	});
 	singleton.applied = true;
 	return parts.join("，");
 }

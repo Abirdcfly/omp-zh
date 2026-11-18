@@ -19,7 +19,7 @@
     "url": "git+https://github.com/Abirdcfly/omp-zh.git"
   },
   "engines": {
-    "omp": "18.22.2"
+    "omp": ">=18.22.2"
   },
   "omp": {
     "extensions": [

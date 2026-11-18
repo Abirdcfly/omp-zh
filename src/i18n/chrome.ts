@@ -96,24 +96,33 @@ export class ChromePatch {
 		const captureSink = (text: string) => this.#capture(text);
 
 		proto.describe = function describe(this: any, cx: any) {
-			const node = originalDescribe.call(this, cx);
-			return isActive() ? translateNode(node, translator) : node;
+			try {
+				const node = originalDescribe.call(this, cx);
+				return isActive() ? translateNode(node, translator) : node;
+			} catch {
+				// 上游节点结构变化时不能让渲染挂掉。
+				return originalDescribe.call(this, cx);
+			}
 		};
 
 		proto.render = function render(this: any, width: number) {
 			const lines = originalRender.call(this, width) as readonly string[];
 			if (!Array.isArray(lines) || lines.length === 0 || !isActive()) return lines;
-			let changed = false;
-			const next = lines.map(line => {
-				const zh = translator.line(line);
-				if (zh !== line) changed = true;
-				else if (capture) {
-					const plain = stripAnsi(line).trim();
-					if (looksLikeUiText(plain)) captureSink(plain);
-				}
-				return zh;
-			});
-			return changed ? next : lines;
+			try {
+				let changed = false;
+				const next = lines.map(line => {
+					const zh = translator.line(line);
+					if (zh !== line) changed = true;
+					else if (capture) {
+						const plain = stripAnsi(line).trim();
+						if (looksLikeUiText(plain)) captureSink(plain);
+					}
+					return zh;
+				});
+				return changed ? next : lines;
+			} catch {
+				return lines;
+			}
 		};
 
 		// 原型方法在某些构建里可能被冻结，defineProperty 失败时保持原样即可。
