@@ -1,6 +1,6 @@
 # omp-zh
 
-`oh-my-pi`（`omp`）的简体中文汉化插件，基线版本 **18.22.2**。
+[`oh-my-pi`](https://github.com/can1357/oh-my-pi)（命令 `omp`）的简体中文汉化插件，基线版本 **18.22.2**。
 
 装上之后，`omp` 的设置面板、斜杠命令说明、补全提示、界面文案全部显示中文；命令名、配置键名、代码标识符、路径与产品专名保持原样，避免影响可执行性。
 
@@ -19,28 +19,37 @@
 - 状态栏、footer / header 的自定义渲染（交互与 RPC 模式下 `setFooter` / `setHeader` 是空操作）；
 - 帮助正文、模型输出、工具原始输出（这些属于内容而非界面文案）。
 
+## 环境要求
+
+- `omp` **18.22.2**（`omp --version` 应输出 `omp/18.22.2`）；
+- `omp` 自身以 TypeScript 源码方式加载扩展，无需预编译。
+
 ## 安装
 
-要求本机已安装 `omp` 18.22.2：
+1. 克隆仓库到本地任意目录：
+
+   ```bash
+   git clone https://github.com/Abirdcfly/omp-zh.git
+   ```
+
+2. 在 omp 的 agent 配置文件 `~/.omp/agent/config.yml` 的 `extensions` 列表里加入本插件入口（路径指向克隆下来的仓库）：
+
+   ```yaml
+   extensions:
+     - <仓库目录>/src/index.ts
+   ```
+
+   已有其它扩展时追加一行即可，顺序无关。
+
+3. 重启 `omp`。
+
+也可以用 omp 自带的扩展安装命令，参数同样指向仓库目录：
 
 ```bash
-omp --version   # omp/18.22.2
+omp plugin install <仓库目录>
 ```
 
-把插件加到 agent 配置（`~/.omp/agent/config.yml`）：
-
-```yaml
-extensions:
-  - /Users/<you>/go/src/omp-zh/src/index.ts
-```
-
-或者用 omp 自带的插件安装命令：
-
-```bash
-omp plugin install /Users/<you>/go/src/omp-zh
-```
-
-`omp` 直接加载 TypeScript 源码，不需要编译步骤。重启 `omp` 后生效。
+安装后输入 `/zh-cn`，能看到词表统计即表示插件已生效。
 
 ## 用法
 
@@ -52,9 +61,9 @@ omp plugin install /Users/<you>/go/src/omp-zh
 | `/zh-cn reload` | 改完词表后热重载 |
 | `/zh-cn capture on\|off` | 收集未翻译的界面文案，写入 `<agentDir>/omp-zh-missing.log` |
 
-配置保存在 `<agentDir>/omp-zh.json`，不改动 `omp` 自己的 `config.yml`。环境变量 `OMP_ZH=0/1` 可临时覆盖总开关。
+插件自身配置保存在 `<agentDir>/omp-zh.json`，不改动 `omp` 的 `config.yml`。环境变量 `OMP_ZH=0/1` 可临时覆盖总开关。
 
-插件同时在 `omp` 的设置面板里注册了四个中文设置项（启用、范围、界面文案、缺词收集），可以在 `/settings` 里直接改。
+插件同时在 `omp` 的设置面板里注册了四个中文设置项（启用、范围、界面文案、缺词收集），可以直接在 `/settings` 里改。
 
 ## 词表结构
 
@@ -73,25 +82,13 @@ catalog/
 ## 开发与校验
 
 ```bash
-bun test                    # 引擎、词表结构、配置存储
-bun scripts/coverage.ts      # 对照 18.22.2 设置清单，逐标签页报覆盖率
-bun scripts/build-catalog.ts # 合并快照 + 结构检查
-bun scripts/extract-omp.ts /path/to/oh-my-pi  # 从上游源码重新抽取设置项与命令清单
+bun test                     # 引擎、词表结构、配置存储
+bun scripts/coverage.ts       # 对照 18.22.2 设置清单，逐标签页报覆盖率
+bun scripts/build-catalog.ts  # 合并快照 + 结构检查
+bun scripts/extract-omp.ts <oh-my-pi 源码目录>  # 从上游源码重抽设置项与命令清单
 ```
 
-`scripts/coverage.ts` 优先读运行时 registry，读不到就用 `scripts/manifest/settings-18.22.2.json`（18.22.2 的离线快照），存在缺口时退出码为 1。
-
-### 真实进程自检
-
-```bash
-mkdir -p /tmp/ompzh-test
-printf 'extensions:\n  - %s/src/index.ts\n' "$PWD" > /tmp/ompzh-test/config.yml
-PI_CODING_AGENT_DIR=/tmp/ompzh-test OMP_ZH_DEBUG=1 \
-  omp -p "hi" --model nonexistent/model --no-tools --no-session < /dev/null
-cat /tmp/ompzh-test/omp-zh-debug.json
-```
-
-探针文件会给出实际改写数量（18.22.2 上：设置 461、选项 608、命令 89、子命令 130、界面钩子已装）。
+`scripts/coverage.ts` 优先读运行时 registry，读不到就回退到 `scripts/manifest/settings-18.22.2.json`（18.22.2 的离线快照），存在缺口时退出码为 1，适合放进 CI。
 
 ## 版本策略
 
